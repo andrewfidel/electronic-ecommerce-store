@@ -137,6 +137,27 @@ font-weight: bolder;
 text-decoration: underline;
 }
 
+
+
+#products_box{
+width: 780px;
+text-align: center;
+margin-left: 60px;
+margin-bottom: 10px;
+}
+
+#single_product{
+float: left;
+margin: 20px;
+padding: 10px;
+}
+
+#single_product img{
+border: 2px solid black;
+}
+
+
+
 #footer{
 width:1000px;
 height:100px;

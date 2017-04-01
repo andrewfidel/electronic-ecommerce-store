@@ -56,20 +56,23 @@ include("functions/functions.php");
 				</ul>
 
 				<div id="sidebar_title">Brands</div>
-
-				<ul id="cats">
-					
+					<ul id="cats">
 					<?php getBrands(); ?>					
-
-				</ul>
+					</ul>
 
 			</div>
-			<div id="content_area">This is content area</div>
+
+				<div id="content_area">
+					<div id="products_box">
+						<?php getPro(); ?>
+					</div>
+				</div>
+
 		</div
 
 
 		<div id="footer">
-			<h2 style="text-align:center; padding-top:30px;">&copy; 2014 by www.OnlineTuting.com</h2>
+			<h2 style="text-align:center; padding-top:30px;">&copy; 2014 by www.OnlineTutoring.com</h2>
 		</div>
 
 	</div> 
