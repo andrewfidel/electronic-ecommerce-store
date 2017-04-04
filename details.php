@@ -18,7 +18,7 @@ include("functions/functions.php");
 
 		<!--Header starts here --> 	
 		<div class= "header_wrapper">	
-			<img id="logo" src="images/logo.gif"/> 
+			<a href="index.php"><img id="logo" src="images/logo.gif"/> </a>
 			<img id="banner" src="images/ad_banner.gif"/> 
 		</div>	
 		<!--Header ends here --> 
@@ -26,11 +26,11 @@ include("functions/functions.php");
 		<!--Navigation Bar starts here --> 
 		<div class="menubar">
 			<ul id="menu">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">All products</a></li>
-				<li><a href="#">My Account</a></li>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="all_products.php">All products</a></li>
+				<li><a href="customer/my_account.php">My Account</a></li>
 				<li><a href="#">Sign up</a></li>
-				<li><a href="#">Shopping Cart</a></li>
+				<li><a href="cart.php">Shopping Cart</a></li>
 				<li><a href="#">Contact us</a></li>
 			</ul>
 
@@ -78,11 +78,9 @@ include("functions/functions.php");
 
 					if(isset($_GET['pro_id'])){
 	
-	$product_id = $_GET['pro_id'];
-	
-	$get_pro = "select * from products where product_id='$product_id'";
-
-	$run_pro = mysqli_query($con, $get_pro); 
+			$product_id = $_GET['pro_id'];
+			$get_pro = "select * from products where product_id='$product_id'";
+			$run_pro = mysqli_query($con, $get_pro); 
 	
 	while($row_pro=mysqli_fetch_array($run_pro)){
 	
