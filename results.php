@@ -74,8 +74,13 @@ include("functions/functions.php");
 
 					<div id="products_box">
 					<?php
-					$get_pro = "select * from products";
-        			$run_pro=mysqli_query($con,$get_pro);
+					if(isset($_GET['search'])){
+
+					$search_query = $_GET['user_query'];
+
+					$get_pro = "select * from products where product_keywords like '%$search_query%'";
+
+        		$run_pro=mysqli_query($con,$get_pro);
         		while($row_pro=mysqli_fetch_array($run_pro)){
             		$pro_id=$row_pro['product_id'];
             		$pro_cat=$row_pro['product_cat'];
@@ -97,6 +102,7 @@ include("functions/functions.php");
 
                     </div>";
         	}
+        }
 					?>
 					</div>
 				</div>
